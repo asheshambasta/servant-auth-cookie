@@ -45,27 +45,26 @@ library
   exposed-modules:
     Servant.Server.Experimental.Auth.Cookie
 
-  build-depends: base           >= 4.7   && < 5.0
+  build-depends: base           -any
                , base64-bytestring
-               , blaze-builder  >= 0.4   && < 0.4.1
+               , blaze-builder  -any
                , bytestring
-               , cereal         >= 0.5   && < 0.6
-               , cereal-time    >= 0.1   && < 0.2
-               , cookie         >= 0.4.1 && < 0.5
-               , cryptonite     >= 0.14  && < 0.25
+               , cereal         -any
+               , cereal-time    -any
+               , cookie         -any
+               , cryptonite     -any
                , data-default
-               , exceptions     >= 0.8   && < 0.9
-               , http-types     >= 0.9   && < 0.12
-               , memory         >= 0.11  && < 0.15
-               , mtl            >= 2.0   && < 3.0
-               , servant        >= 0.5   && < 0.13
-               , servant-server >= 0.5   && < 0.13
-               , tagged         == 0.8.*
+               , exceptions -any
+               , http-types     -any
+               , memory         -any
+               , mtl            -any
+               , servant        -any
+               , servant-server -any
+               , tagged         -any
                , text
-               , time           >= 1.6   && < 1.8.1
-               , transformers   >= 0.4   && < 0.6
-               , wai            >= 3.0   && < 3.3
-
+               , time           -any
+               , transformers   -any
+               , wai            -any
   if flag(dev)
     ghc-options:      -Wall -Werror
   else
@@ -98,21 +97,21 @@ test-suite tests
   else
     ghc-options:      -O2 -Wall
 
-  build-depends: base           >= 4.7  && < 5.0
-               , QuickCheck     >= 2.4  && < 3.0
+  build-depends: base           -any
+               , QuickCheck     -any
                , bytestring
-               , cereal         >= 0.5  && < 0.6
-               , cryptonite     >= 0.14 && < 0.25
+               , cereal         -any
+               , cryptonite     -any
                , data-default
-               , deepseq        >= 1.3  && < 1.5
+               , deepseq        -any
                , exceptions
-               , hspec          >= 2.0  && < 3.0
+               , hspec          -any
                , servant-auth-cookie
-               , servant-server >= 0.5  && < 0.13
-               , tagged         == 0.8.*
+               , servant-server -any
+               , tagged         -any
                , template-haskell
-               , transformers   >= 0.4  && < 0.6
-               , time           >= 1.5  && < 1.8.1
+               , transformers   -any
+               , time           -any
   default-language:    Haskell2010
 
 
